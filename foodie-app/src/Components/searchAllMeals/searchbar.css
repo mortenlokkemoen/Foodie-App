@@ -1,0 +1,105 @@
+.header-container {
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #ff8f66;
+}
+
+.search-bar-title {
+    color: #360857;
+    font-size: 2.2rem;
+    
+}
+
+.search-sub-title {
+    color:#360857;
+    font-size:1rem;
+}
+
+/* Styles the input field*/
+.searchbar{
+    padding: 5px 0;
+    text-align: center;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-bottom:2rem;
+}
+
+.searchbar:focus,
+.searchbar:active {
+    border-bottom: 2px solid #d45324;
+}
+
+
+.meal-not-found {
+    color:red;
+    background-color: #fff;
+}
+
+.searchbar-container{
+    display: grid;
+    justify-content: center;
+}
+.cancel-btn {
+    border:none;
+    cursor: pointer;
+    color:#360857;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#ff8f66;
+}
+
+.cancel-btn:hover {
+    color: #fff;
+}
+
+.meal-card{
+    position: relative;
+    text-align:initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.meal-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: #360857;
+}
+
+.meal-prep-ins {
+    letter-spacing: .03em;
+    padding: 0 0 1em 0;
+    text-align: justify;
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+.meal-img {
+    border-radius: 10px;
+    height: 40%;
+    width: 70%;
+}
+
+.ingrediant-container {
+    font-size: 12px;
+    font-weight: bold;
+    display:flex;
+}
+
+.ingr {
+    border: 1.5px solid #360857;
+    margin: 0 5px;
+    padding:0.5rem 0.2rem;
+}

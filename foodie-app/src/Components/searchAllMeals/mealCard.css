@@ -1,0 +1,47 @@
+.meal-card{
+    position: relative;
+    text-align:initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.meal-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: #360857;
+}
+
+.meal-prep-ins {
+    letter-spacing: .03em;
+    padding: 0 0 1em 0;
+    text-align: justify;
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+.meal-img {
+    border-radius: 10px;
+    height: 40%;
+    width: 70%;
+}
+
+.ingrediant-container {
+    font-size: 12px;
+    font-weight: bold;
+    display:flex;
+}
+
+.ingr {
+    border: 1.5px solid #360857;
+    margin: 0 5px;
+    padding:0.5rem 0.2rem;
+}
+
