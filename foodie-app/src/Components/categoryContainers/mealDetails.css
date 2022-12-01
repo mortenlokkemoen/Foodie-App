@@ -1,0 +1,38 @@
+.detail-container{
+    display:grid;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    padding:2rem;
+}
+
+.meal-detail-title{
+    color:#23239a;
+    font-size:2rem;
+}
+
+.meal-detail-img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.meal-detail-area {
+    color:#23239a;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.meal-prep-ins{
+    padding: 1.2rem;
+    color:#23239a;
+}
+
+.mealDetails{
+    text-align: center;
+    margin:16px 30px;
+}
+
+.cancel-btn {
+    margin-top: 24px;
+    color: #23239a;
+}

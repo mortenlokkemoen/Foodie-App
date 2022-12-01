@@ -1,12 +1,13 @@
 .ran-container {
     margin: 2rem;
-    background-color: #ff8f66;
+    background-color: #eaf1ff;
     text-align: center;
 }
 
 .ran-title {
-    color:#360857;
-
+    color:#223eb8;
+    font-size: 1.4rem;
+    padding-top:1rem;
 }
 
 .ran-btn {
@@ -15,19 +16,19 @@
     padding: 0.7rem;
     width: 15%;
     border-radius: 8px;
-    background-color: #631d95;
-    color: #ff8f66;
+    background-color: #3754d8;
+    color: #aec7f9;
 }
 
 .ran-btn:hover {
     transform: scale(1.1);
-    background-color: #8e2bd5;
+    background-color: #182b83;
 }
 
 .ran-info {
     font-size: 14px;
     font-weight: bold;
-    color:#360857;
+    color:#3754d8;
 }
 
 .meal-card{
@@ -66,13 +67,15 @@
 }
 
 .ingrediant-container {
+    display: flex;
     font-size: 12px;
     font-weight: bold;
     display:flex;
 }
 
 .ingr {
-    border: 1.5px solid #360857;
+    background-color: #aec7f9;
     margin: 0 5px;
-    padding:0.5rem 0.2rem;
+    padding:0.2rem 0.6rem;
+    border-radius: 8px;
 }

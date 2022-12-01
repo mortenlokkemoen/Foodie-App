@@ -1,9 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -11,60 +5,69 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Hey and welcome to my App using the MealDB API and creating readable information.
+The design is suppose to be simple, it is all about the code.
+For this project I have installed the following:
 
-### `npm test`
+## Installing node
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- First install Node either globally or locally.
+- you can go to https://nodejs.org/en/download/ and install it for the right OS.
+- Now you can type npm init to initialize the project.
 
-### `npm run build`
+## React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npx create-react-app "app name"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- You might need to go one directory down by typing cd foodie-app
+- use npm start to start the project up.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Axios
 
-### `npm run eject`
+axios - npm install axios
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Promise based HTTP client for browser and node.js
+- We get access to routes from React Router dom which is helpful for
+- putting components and assigning it to different routes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Redux toolkit
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Redux toolkit - npm install @reduxjs/toolkit and npm install redux
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- You need to install redux for the core, and the toolkits to use all these extra APIs.
+- This helps us save values in a global state and use it throughout our project.
+- We use configureStore to automatically combine our slice reducers, add whatever
+- redux middleware we supply and now adds redux-thunk by default.
 
-## Learn More
+## NOW TO THE APPLICATION ITSELF
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- We use Axios to create routes to our project. But in order to make use of them we need to wrap
+- our <App> in index.js with <Router> formally known as <BrowserRouter>
+- When we are there lets also add a <Provider> and wrap that around our <App> aswell.
+- This comes from Redux and lets us use global state variables in our project.
+- We then attach store to it which will hold our reducers.
+- Its the reducers job to send and take value throughout our project.
+- The Reducer sends data to the state, which sends data to the UI.
+- The UI talks to the event handler which dispatches data into our reducers which saves in in the store.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The actions folder is where we will fetch our data from the API using Axios and then dispatch the data to our reducers.
+- with redux tools we can take multiple reducers at once and send it to the store.
+- Before, you had to use createStore, but the new way to do it is configureStore.
+- We send our data like a payload.
 
-### Code Splitting
+- On our main page its pretty self explanatory.
+- We have a main page which lets us use some of the filter options from the API.
+- Since we already set up the different endpoints of the API we can use this with confidence.
+- I could also use the API key and set it to 1 and then break up the links further for a better workflow
+- but it works for now.
+- Use the searchbar to search the database based on what is written, and listen to the 'Enter' key button!
+- The details reducer keep track of the ID of what meal is shown and search up more information on it.
+- I chose to hardcode some of the options for Area, Category and Ingredients, but I could have also mapped it all out,
+- and rendered it with say <button>value= {meal.value}>{meal.value}</button> so for example <button>value={Chicken}>Chicken<button>
+- would show up. But I just wanted it to be simple enough.
+- I struggled with abit of the redux to begin with.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- I did look up a lot of youtube videos and also search the internet, in order to understand redux and it
+- took alot longer to do this then I had anticipated, regardless I have a much better grasp on Redux now thanks to it.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Morten

@@ -1,0 +1,16 @@
+{
+  "name": "eksamen-foodie",
+  "version": "1.0.0",
+  "description": "\"A foodbased API\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "keywords": [
+    "database",
+    "api",
+    "food"
+  ],
+  "author": "Morten Lokkemoen",
+  "license": "ISC"
+}

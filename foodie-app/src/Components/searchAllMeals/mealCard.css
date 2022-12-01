@@ -34,14 +34,16 @@
 }
 
 .ingrediant-container {
+    display: flex;
     font-size: 12px;
     font-weight: bold;
     display:flex;
 }
 
 .ingr {
-    border: 1.5px solid #360857;
+    background-color: #aec7f9;
     margin: 0 5px;
-    padding:0.5rem 0.2rem;
+    padding:0.2rem 0.6rem;
+    border-radius: 8px;
 }
 

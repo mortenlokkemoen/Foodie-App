@@ -10,11 +10,26 @@ const Layout = () => {
                 <p className="layout-sub-title">Here you can search foods delicious foods from around the world! Come take a look</p>
                 <div className="link-container">
                     <p className="link-text">Here you can search up recipes in our database! Try it out!</p>
-                    <Link to="searchFood"><button className="layout-btn">Search food here</button></Link>
+                    <Link to="searchFood"><button className="layout-btn">Enter page</button></Link>
                 </div>
+
                 <div className="link-container">
                     <p className="link-text">Having troubles deciding on food? Get a random meal here!</p>
-                    <Link to="randomMeal"><button className="layout-btn">Random meal</button></Link>
+                    <Link to="randomMeal"><button className="layout-btn">Enter page</button></Link>
+                </div>
+
+                <div className="link-container">
+                    <p className="link-text">You can also search our food by category!</p>
+                    <Link to="mealbycategory"><button className="layout-btn">Enter page</button></Link>
+                </div>
+
+                <div className="link-container">
+                    <p className="link-text">Perhaps you look for a dish containing a specific ingredient?</p>
+                    <Link to="mealbyingredients"><button className="layout-btn">Enter page</button></Link>
+                </div>
+                <div className="link-container">
+                    <p className="link-text">How about some exotic food from one of these locations?</p>
+                    <Link to="mealbycountry"><button className="layout-btn">Enter page</button></Link>
                 </div>
              </div>
             <Outlet/>

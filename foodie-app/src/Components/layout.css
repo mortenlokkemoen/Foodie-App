@@ -6,7 +6,7 @@
     justify-self: center;
     width: 100%;
     height: 100%;
-    color: #360857;
+    color: #223eb8;
 }
 
 .layout-links {
@@ -26,22 +26,22 @@
     padding: 0.7rem;
     width: 30%;
     border-radius: 8px;
-    background-color: #631d95;
-    color: #ff8f66;
+    background-color: #3754d8;
+    color: #aec7f9;
 }
 
 .layout-btn:hover {
     transform: scale(1.1);
-    background-color: #8e2bd5;
+    background-color: #182b83;
 }
 
 a {
-    color: #631d95;
+    color: #182b83;
   }
   
   a:link,
   a:visited {
-    color: #631d95;
+    color: #182b83;
   }
   
   a:hover {

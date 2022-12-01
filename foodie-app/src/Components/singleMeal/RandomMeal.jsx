@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import IngredientAndMeasure from "../searchAllMeals/Ingredients";
+import axios from "axios";
 import "./randomMeal.css";
 
 const RandomMeal = () => {
@@ -10,20 +12,14 @@ const RandomMeal = () => {
     const handleClick = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php',{
-                method: 'GET',
+            const {data} = await axios.get('https://www.themealdb.com/api/json/v1/1/random.php',{
                 headers: {
                     Accept: 'application/json',
                 },
             });
-            console.log(response);
-            if (!response.ok) {
-                throw new Error(`Error! status: ${response.status}`);
-            }
-
-            const result = await response.json();
-            console.log('Result is: ', JSON.stringify(result,null,4));
-            setData(result);
+        
+            console.log('data is: ', JSON.stringify(data,null,4));
+            setData(data);
 
         } catch (err) {
             setErr(err.message);
@@ -48,20 +44,13 @@ const RandomMeal = () => {
                         <div className="meal-info-container">
                             <h1 className="meal-title">{meals.strMeal}</h1>
                             <p className="meal-origin">Origin: {meals.strArea}</p>
-                            <p className="meal-tags">Tags:{meals.strTags}</p>
+                            {meals.strTags
+                            ? <p className="meal-tags"> Tags: {meals.strTags}</p> 
+                            : <p className="meal-tags"> Tags: No tags found</p>}
                             <h2 className="meal-prep-title">Recipe:</h2>
                             <p className="meal-prep-ins">{meals.strInstructions}</p>
                             <p>Ingredients:</p>
-                        <div className="ingrediant-container">
-                            <p className="ingr">{meals.strIngredient1}<br/>{meals.strMeasure1}</p>
-                            <p className="ingr">{meals.strIngredient2}<br/>{meals.strMeasure2}</p>
-                            <p className="ingr">{meals.strIngredient3}<br/>{meals.strMeasure3}</p>
-                            <p className="ingr">{meals.strIngredient4}<br/>{meals.strMeasure4}</p>
-                            <p className="ingr">{meals.strIngredient5}<br/>{meals.strMeasure5}</p>
-                            <p className="ingr">{meals.strIngredient6}<br/>{meals.strMeasure6}</p>
-                            <p className="ingr">{meals.strIngredient7}<br/>{meals.strMeasure7}</p>
-                            <p className="ingr">{meals.strIngredient8}<br/>{meals.strMeasure8}</p>
-                        </div>   
+                            <IngredientAndMeasure meal ={meals} />  
                         </div>
                     </div>
 

@@ -11,7 +11,6 @@ const Searchbar = () => {
         { 
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`).then(res=>res.json()).then(data=> {setMeal(data.meals);setSearch('')})
         }
-
     }
     return ( 
         <div className="header-container">
@@ -32,11 +31,11 @@ const Searchbar = () => {
             <div className="results-container">
                 {
                     (meal == null)? <p className="meal-not-found">No meal found, try another word!</p> :
-                        meal.map((res) => {
-                            return (
-                                <MealCard data={res} />
-                            );
-                        })}
+                    meal.map((res) => {
+                    return (
+                    <MealCard data={res} />
+                );
+                })}
             </div>
         </div>
     )
